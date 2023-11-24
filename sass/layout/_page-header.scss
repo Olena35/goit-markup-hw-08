@@ -1,0 +1,11 @@
+.page-header {
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: #ECECEC;
+
+    &__nav {
+            display: flex;
+            align-items: center;
+        }
+}
+

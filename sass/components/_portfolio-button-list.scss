@@ -1,8 +1,17 @@
 
 .button-list {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
+
+    @include mq(tablet-only) {
+       margin-bottom: 30px;
+        }
+
+    @include mq(desktop) {
+       margin-bottom: 50px;
+                 }
 }
 
 .button-list button {
@@ -31,4 +40,9 @@
 
 .button-list .button-point+.button-point {
     margin-left: 8px;
+
+    // @include mq(desktop) {
+    // margin-bottom: 15px;
+    //     }
+   
 }

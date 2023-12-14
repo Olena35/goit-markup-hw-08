@@ -1,7 +1,16 @@
 /* Work */
 
+// Desctop screen 1200px+
+        
+
+
 .work {
-    padding-bottom: 94px;
+
+@include mq(not-desktop) {
+display: none;
+    }
+    
+padding-bottom: 94px;
 
 &__title {
         padding-top: 0;
@@ -14,9 +23,7 @@
         line-height: 1.17;
         letter-spacing: 1.08px;
     }
-
 }
-
 
 
 .worklist {
@@ -34,7 +41,6 @@
 &__image {
         display: block;
     }
-
 
 &__text {
         position: absolute;
@@ -65,5 +71,4 @@
 }
 
 }
-
 

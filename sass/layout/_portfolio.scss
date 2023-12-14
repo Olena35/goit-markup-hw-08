@@ -6,6 +6,11 @@
     gap: 30px;
     padding: 0;
     list-style: none;
+
+    @include mq(tablet) {
+    display: flex;
+    flex-wrap: wrap;
+        }
 }
 
 .card-link {
@@ -92,7 +97,16 @@
 }
 
 .little-container {
+    width: 450px;
+
+@include mq(tablet-only) {
+    width: 354px;
+    }
+   
+@include mq(desktop) {
     width: 370px;
+    }
+
 }
 
 

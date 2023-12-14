@@ -1,10 +1,17 @@
 /* Footer */
 
+
 .footer-section {
-    background-color: #2F303A;
-    padding-top: 60px;
-    padding-bottom: 60px;
-}
+            background-color: #2F303A;
+            padding-top: 60px;
+            padding-bottom: 60px;
+    
+            @include mq(desktop) {
+                padding-top: 94px;
+                padding-bottom: 94px;
+            }
+        }
+
 
 
 .footer-adress {

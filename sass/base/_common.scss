@@ -8,6 +8,12 @@
      letter-spacing: 0.42px;
  }
 
+ img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+ }
+
  .link {
      display: block;
      padding-top: 32px;
@@ -25,12 +31,17 @@
      padding-top: 94px;
      padding-bottom: 94px;
 
+@include mq(not-desktop) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    }
+
 &.no-padding {
             padding-top: 0;
             padding-bottom: 0;
         }
+        }
 
- }
 
  .studio,
  .portfolio {

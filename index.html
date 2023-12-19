@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="./css/main.min.css" />
   </head>
   <body>
-    <header class="page-header">
+   <!-- <header class="page-header">
       <div class="container page-header__nav">
         <nav class="page-header__nav">
           <a href="./index.html" class="logo"
@@ -327,18 +327,42 @@
         </div>
       </section>
 
-      <section class="team team-color">
+      <section class="team">
         <div class="container">
           <h2 class="team-title">Наша команда</h2>
           <ul class="team-list list">
             <li class="team-list__card">
-              <img
-                src="./images/team/igor.jpg"
-                alt="Дизайнер"
-                width="270"
-                height="260"
-                class="worklist__image"
+              <picture>
+
+              <source 
+              media="(min-width: 1200px)"
+              srcset="./images/team/igor/desktop/igor@1xdesk.jpg 1x,
+              ./images/team/igor/desktop/igor@1xdesk.jpg 2x" 
+              type="image/jpg"
               />
+
+              <source 
+              media="(min-width: 768px)" 
+              srcset="./images/team/igor/tablet/igor@1xtab.jpg 1x,
+              ./images/team/igor/tablet/igor@2xtab.jpg 2x" 
+              type="image/jpg"
+              />
+
+              <source 
+              media="(max-width: 767px)"
+              srcset="./images/team/igor/mobile/igor@1xmob.jpg 1x,
+              ./images/team/igor/mobile/igor@2xmob.jpg 2x" 
+              type="image/jpg"
+              />
+
+              <img 
+              class="worklist__image"
+              src="./images/team/igor/mobile/igor@1xmob.jpg" 
+              alt="Дизайнер" 
+              width="450"  
+              />
+              </picture>
+
               <div class="team-list__about">
                 <h3 class="team-list__name">Ігор Дем'яненко</h3>
                 <p class="team-list__profession" lang="en">Product Designer</p>
@@ -391,14 +415,39 @@
               </div>
             </li>
             <li class="team-list__card">
-              <img
-                src="./images/team/olga.jpg"
-                alt="Розробник сайтів"
-                width="270"
-                height="260"
-                class="worklist__image"
-              />
-              <div class="team-list__about">
+            <picture>
+
+          
+  <source 
+  media="(min-width: 1200px)" 
+  srcset="./images/team/olga/desktop/olga@1xdesk.jpg 1x,
+  ./images/team/olga/desktop/olga@1xdesk.jpg 2x" 
+  type="image/jpg" 
+  />
+       
+  <source 
+  media="(min-width: 768px)" 
+  srcset="./images/team/olga/tablet/olga@1xtab.jpg 1x,
+  ./images/team/olga/tablet/olga@2xtab.jpg 2x" 
+  type="image/jpg"
+  />
+        
+  <source 
+  media="(max-width: 767px)" 
+  srcset="./images/team/olga/mobile/olga@1xmob.jpg 1x,
+  ./images/team/olga/mobile/olga@2xmob.jpg 2x" 
+  type="image/jpg"
+  />
+
+  <img 
+  class="worklist__image" 
+  src="./images/team/olga/mobile/olga@1xmob.jpg"
+  alt="Розробник сайтів"
+  width="450"
+  />
+</picture>
+
+ <div class="team-list__about">
                 <h3 class="team-list__name">Ольга Рєпіна</h3>
                 <p class="team-list__profession" lang="en">
                   Frontend Developer
@@ -452,13 +501,38 @@
               </div>
             </li>
             <li class="team-list__card">
-              <img
-                src="./images/team/mykola.jpg"
-                alt="Маркетинговий спеціаліст"
-                width="270"
-                height="260"
-                class="worklist__image"
-              />
+              <picture>
+              
+                
+                <source 
+                media="(min-width: 1200px)" 
+                srcset="./images/team/mykola/desktop/mykola@1xdesk.jpg 1x,
+                ./images/team/mykola/desktop/mykola@1xdesk.jpg 2x," 
+                type="image/jpg"
+                />
+              
+                
+                <source 
+                media="(min-width: 768px)" 
+                srcset="./images/team/mykola/tablet/mykola@1xtab.jpg 1x,
+                ./images/team/mykola/tablet/mykola@1xtab.jpg 2x,"  
+                type="image/jpg"
+                />
+              
+               
+                <source media="(max-width: 767px)"
+                 srcset="./images/team/mykola/mobile/mykola@1xmob.jpg 1x,
+                ./images/team/mykola/mobile/mykola@1xmob.jpg 2x,"
+                type="image/jpg" 
+                />
+              
+                <img class="worklist__image"
+                src="./images/team/mykola/mobile/mykola@1xmob.jpg"
+                alt="Маркетинговий спеціаліст"   
+                  width="450"
+                  />
+              </picture>
+
               <div class="team-list__about">
                 <h3 class="team-list__name">Микола Тарасов</h3>
                 <p class="team-list__profession" lang="en">Marketing</p>
@@ -511,13 +585,34 @@
               </div>
             </li>
             <li class="team-list__card">
-              <img
-                src="./images/team/myhailo.jpg"
-                alt="Дизайнер інтерфейсу"
-                width="270"
-                height="260"
-                class="worklist__image"
-              />
+
+            <picture>
+                          
+            <source
+             media="(min-width: 1200px)" 
+             srcset="./images/team/myhailo/desktop/myhailo@1xdesk.jpg 1x, 
+             ./images/team/myhailo/desktop/myhailo@2xdesk.jpg 2x" 
+             type="image/jpg"
+             />
+                          
+            <source media="(min-width: 768px)"
+             srcset="./images/team/myhailo/tablet/myhailo@1xtab.jpg 1x, 
+             ./images/team/myhailo/tablet/myhailo@2xtab.jpg 2x" 
+             type="image/jpg" 
+             />             
+                          
+            <source media="(max-width: 767px)"
+             srcset="./images/team/myhailo/mobile/myhailo@1xmob.jpg 1x, 
+             ./images/team/myhailo/mobile/myhailo@2xmob.jpg 2x"
+            type="image/jpg"
+            />
+                          
+            <img class="worklist__image"
+             src="./images/team/myhailo/mobile/myhailo@1xmob.jpg"
+              alt="Дизайнер інтерфейсу" 
+              width="450" />
+              </picture>
+
               <div class="team-list__about">
                 <h3 class="team-list__name">Михайло Єрмаков</h3>
                 <p class="team-list__profession" lang="en">UI Designer</p>
@@ -627,7 +722,7 @@
           </ul>
         </div>
       </section>
-    </main>
+    </main> -->
 
     <footer class="footer-section">
       <div class="container footer-box">
@@ -711,12 +806,13 @@
           </form>
         </div>
       </div>
-    </footer>
-
-    <script src="./js/modal.js"></script>
+    </footer>   
 
     <script src="./js/mobile-menu.js"></script>
 
+    <script src="./js/modal.js"></script>
+
+  
     <script>
       (() => {
         document.querySelector("js-speaker-form");

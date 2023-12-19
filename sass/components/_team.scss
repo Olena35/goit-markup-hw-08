@@ -1,112 +1,110 @@
 /* Team */
 
 .team {
-    padding-top: 60px;
-    padding-bottom: 60px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: var(--primary-bg-color);
+  background-size: 100%;
 
-@include mq(desktop) {
+  @include mq(desktop) {
     padding-top: 94px;
     padding-bottom: 94px;
-    }
-}
-
-.team-color {
-    background-color: var(--primary-bg-color);
+  }
 }
 
 .team-title {
-    padding-top: 0;
-    margin-top: 0;
-    margin-bottom: 50px;
-    color: var(--title-text-color);
-    text-align: center;
-    font-size: 28px;
-    line-height: 1.18;
-    letter-spacing: 0.84px;
-    margin-bottom: 30px;
+  padding-top: 0;
+  margin-top: 0;
+  margin-bottom: 50px;
+  color: var(--title-text-color);
+  text-align: center;
+  font-size: 28px;
+  line-height: 1.18;
+  letter-spacing: 0.84px;
+  margin-bottom: 30px;
 
-    
-    @include mq(desktop) {
-        font-size: 36px;
-            font-weight: 700;
-            line-height: 1.17;
-            letter-spacing: 1.08px;
-        }
-
+  @include mq(desktop) {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.17;
+    letter-spacing: 1.08px;
+  }
 }
-
 
 .team-list {
+  @include mq(tablet) {
+    display: flex;
+    flex-wrap: wrap;
+  }
 
-@include mq(tablet) {
-        display: flex;
-        flex-wrap: wrap;
+  @include mq(tablet-only) {
+    margin: -15px;
+  }
+
+  &__card {
+    flex-shrink: 0;
+    background-color: var(--main-color);
+    border-radius: 0px 0px 4px 4px;
+    box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2),
+      0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+
+    @include mq(mobile-only) {
+      margin-bottom: 30px;
+      margin-right: 0px;
     }
 
-@include mq(tablet-only) {
-    margin: -15px;
+    @include mq(tablet-only) {
+      width: calc((100% - 4 * 15px) / 2);
+      margin: 15px;
+    }
+
+    @include mq(desktop) {
+      width: 270px;
+      margin-right: 30px;
+    }
+  }
+
+  &__card:last-child {
+    @include mq(desktop) {
+      margin-right: 0;
+    }
+  }
+
+  &__name {
+    margin-bottom: 10px;
+    color: var(--title-text-color);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.19;
+    letter-spacing: 0.48px;
+    text-align: center;
+  }
+
+  &__profession {
+    color: var(--primary-text-color);
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.19;
+    letter-spacing: 0.48px;
+    text-align: center;
+    margin-bottom: 16px;
+  }
+
+  &__about {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  &__img {
+    width: 450px;
+
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      width: 354px;
+    }
+
+    @media screen and (min-width: 1200px) {
+      width: 270px;
+    }
+  }
 }
-
-    &__card {
-            flex-shrink: 0;
-            background-color: var(--main-color);
-            border-radius: 0px 0px 4px 4px;
-            box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.20), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
-        
-@include mq(mobile-only) {
-            margin-bottom: 30px;
-            margin-right: 0px;
-            }
-
-@include mq(tablet-only) {
-            width: calc((100% - 4 * 15px) / 2);
-            margin: 15px;
-            }
-
-@include mq(desktop) {
-            width: 270px;
-            margin-right: 30px;
-            }
-
-        }
-
-         
-
-    &__card:last-child {
-        @include mq(desktop) {
-            margin-right: 0;
-            }
-           
-        }
-    
-    &__name {
-            margin-bottom: 10px;
-            color: var(--title-text-color);
-            font-size: 16px;
-            font-weight: 500;
-            line-height: 1.19;
-            letter-spacing: 0.48px;
-            text-align: center;
-        }
-    
-    
-    &__profession {
-            color: var(--primary-text-color);
-            font-family: Roboto;
-            font-size: 16px;
-            font-weight: 400;
-            line-height: 1.19;
-            letter-spacing: 0.48px;
-            text-align: center;
-            margin-bottom: 16px;
-        }
-    
-    &__about {
-            padding-top: 30px;
-            padding-bottom: 30px;
-        }
-}
-
-
-
-

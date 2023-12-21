@@ -87,14 +87,22 @@ display: flex;
     
             margin-left: 0;
             margin-bottom: 60px;
+
+            @include mq(desktop) {
+                    margin-bottom: 0;
+                }
         
 }
 
 .footer-part+.footer-part {
+    @include mq(tablet) {
+        margin-left: 165px;
+    }
+    
     @include mq(desktop) {
         margin-left: 70px;
     }
-    
+
 }
 
 .social-title {
@@ -149,15 +157,16 @@ display: flex;
 
 .footer-submit {
 
-    max-width: 480px;
+    width: 480px;
 
     @include mq(tablet) {
             align-items: baseline;
         }
+
     @include mq(desktop) {
     margin-left: auto;
     width: 570px;
-}
+        }
  }
 
 

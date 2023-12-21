@@ -244,3 +244,30 @@
 .contract {
     color: var(--accent-color);
 }
+
+
+
+// Button for modal-wrapper
+
+.button-close {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    border: 1px solid rgba(0, 0, 0, 0.10);
+    border-radius: 50px;
+    background-color: transparent;
+    cursor: pointer;
+    transition: fill 250ms var(--timing-function),
+        opacity 250ms var(--timing-function);
+
+    &:focus,
+    &:hover {
+        fill: var(--accent-color);
+    }
+}

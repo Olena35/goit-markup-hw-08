@@ -24,7 +24,14 @@
 }
 
 address {
-    margin-top: 28px;
+
+    margin-top: 20px;
+
+    @include mq(desktop) {
+        margin-top: 28px;   
+        }
+    
+        
 }
 
 .footer-contacts {
@@ -75,11 +82,23 @@ display: flex;
     // align-items: baseline;
 }
 
+ 
+.footer-part {
+    
+            margin-left: 0;
+            margin-bottom: 60px;
+        
+}
+
 .footer-part+.footer-part {
-    margin-left: 70px;
+    @include mq(desktop) {
+        margin-left: 70px;
+    }
+    
 }
 
 .social-title {
+    text-align: center;
     padding-top: 0;
     margin-top: 0;
     font-size: 14px;
@@ -88,15 +107,23 @@ display: flex;
     line-height: 1.14;
     letter-spacing: 0.42px;
     text-transform: uppercase;
+    
 }
 
 
 .attend {
     display: flex;
-    align-items: baseline;
+    justify-content: center;
     margin-top: 20px;
     gap: 10px;
+    
+
+@include mq(tablet) {
+        align-items: baseline;
+    }
 }
+
+
 
 
 .ellipse {
@@ -121,10 +148,18 @@ display: flex;
 /* Форма для розсилки */
 
 .footer-submit {
-    width: 570px;
-    align-items: baseline;
+
+    max-width: 480px;
+
+    @include mq(tablet) {
+            align-items: baseline;
+        }
+    @include mq(desktop) {
     margin-left: auto;
+    width: 570px;
 }
+ }
+
 
 .social-footer {
     fill: var(--main-color);
@@ -134,21 +169,24 @@ display: flex;
 
 
 .email-form {
-    display: flex;
     margin-top: 20px;
     gap: 12px;
-    width: 358px;
-    height: 50px;
+    width: 100%;
     flex-shrink: 0;
+
+@include mq(desktop) {
+        display: flex;
+    }
+
 }
 
 
 .footer-input {
     padding-top: 15px;
     padding-bottom: 16px;
-    padding-left: 16px;
-    width: 358px;
+    width: 100%;
     height: 50px;
+    margin-bottom: 20px;
     flex-shrink: 0;
     cursor: pointer;
     border-radius: 4px;
@@ -164,12 +202,20 @@ display: flex;
         outline: 1px solid var(--accent-color);
         outline-offset: -1px;
     }
+
+        @include mq(desktop) {
+        width: 358px;
+        height: 50px;
+        margin-bottom: 0;
+        padding-left: 16px;
+        }
 }
 
 
 // Footer-button
 
 .footer-btn {
+    margin: auto;
     display: flex;
     justify-content: center;
     align-items: center;

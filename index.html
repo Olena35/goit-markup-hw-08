@@ -26,18 +26,17 @@
           >
 
           <button
-            type="button"
-            class="menu__toggle js-open-menu"
+            class="menu-toggle js-open-menu"
             aria-expanded="false"
             aria-controls="mobile-menu"
           >
             <svg
-              class="menu__icon"
-              width="40"
-              height="40"
-              aria-label="Перемикач мобільного меню"
+              width="24"
+              height="24"
+              fill="currentColor"
+              aria-label="Кнопка відкриття мобільного меню"
             >
-              <use class="icon-menu" href="./images/icons.svg#icon-menu"></use>
+              <use href="./images/icons.svg#icon-menu"></use>
             </svg>
           </button>
 
@@ -77,59 +76,44 @@
           </li>
         </ul>
 
-        <div class="js-menu-container menu" id="mobile-menu">
-          <button
-            type="button"
-            class="menu__close js-close-menu"
-            aria-expanded="false"
-            aria-controls="mobile-menu"
-          >
+        <div class="menu-container js-menu-container" id="mobile-menu">
+          <button class="menu-toggle js-close-menu">
             <svg
-              class="menu__close-icon"
-              width="40"
-              height="40"
-              aria-label="Перемикач мобільного меню"
+              width="24"
+              height="24"
+              fill="currentColor"
+              aria-label="Кнопка закриття мобільного меню"
             >
-              <use
-                class="icon-close-menu"
-                href="./images/icons.svg#icon-close"
-              ></use>
+              <use href="./images/icons.svg#icon-menu-close"></use>
             </svg>
           </button>
-          <ul class="menu__nav">
-            <li>
-              <a class="menu__link menu__current" href="./index.html">Студія</a>
-            </li>
-            <li>
-              <a class="menu__link" href="./portfolio.html">Портфоліо</a>
-            </li>
-            <li>
-              <a class="menu__link" href="#">Контакти</a>
-            </li>
-          </ul>
 
-          <ul class="menu__contacts">
-            <li>
-              <a class="menu__tel" href="tel:+380961111111">
-                +380 96 111 1111
-              </a>
-            </li>
-            <li>
-              <a class="menu__email" href="mailto:info@devstudio.com">
-                info@devstudio.com
-              </a>
-            </li>
-          </ul>
+          <div class="menu">
 
-          <ul class="menu__socials">
-            <li>
-              <a href="instagram.com" class="menu__social-item">Instagram</a>
-            </li>
-            <li><a href="x.com" class="menu__social-item">Twitter</a></li>
-            <li><a href="" class="menu__social-item">Facebook</a></li>
-            <li><a href="" class="menu__social-item">LinkedIn</a></li>
-          </ul>
+            <!-- Перелік розділів -->
+            <ul class="topics list">
+              <li><a href="" class="topics-item">Студія</a></li>
+              <li><a href="" class="topics-item">Портфоліо</a></li>
+              <li><a href="" class="topics-item">Контакти</a></li>
+            </ul>
+
+            <!-- Контакти  -->
+            <ul class="contacts-list list">
+              <li><a href="" class="contact-item">+38 096 111 11 11</a></li>
+              <li><a href="" class="contact-item">info@devstudio.com</a></li>
+            </ul>
+            
+              <!-- Соц мережі -->
+            <ul class="socials-list list">
+              <li><a href="" class="soc-item">Instagram</a></li>
+              <li><a href="" class="soc-item">Twitter</a></li>
+              <li><a href="" class="soc-item">Facebook</a></li>
+              <li><a href="" class="soc-item">LinkedIn</a></li>
+            </ul>
+
+          </div>
         </div>
+
       </div>
     </header>
 
@@ -829,9 +813,11 @@
       </div>
     </footer>
 
-    <script src="./js/mobile-menu.js"></script>
 
-    <script src="./js/modal.js"></script>
+
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+    integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+    crossorigin="anonymous"></script>
 
     <script>
       (() => {
@@ -846,5 +832,9 @@
           });
       })();
     </script>
+
+    <script src="./js/mobile-menu.js"></script>
+    <script src="./js/modal.js"></script>
+
   </body>
 </html>

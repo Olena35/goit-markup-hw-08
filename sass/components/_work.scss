@@ -6,10 +6,11 @@
 
 .work {
 
+
 @include mq(not-desktop) {
 display: none;
     }
-    
+
 padding-bottom: 94px;
 
 &__title {

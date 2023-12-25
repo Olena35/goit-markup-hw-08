@@ -2,11 +2,22 @@
     margin-right: 0;
     color: var(--accent-color);
     font-family: var(--secondary-font);
-    font-size: 26px;
+    text-decoration: none;
+    font-size: 24px;
+    font-style: normal;
     font-weight: 700;
     line-height: 1.38;
-    letter-spacing: 0.78px;
-    text-decoration: none;
+    letter-spacing: 0.72px;
+
+@include mq(desktop) {
+        font-size: 26px;
+        font-weight: 700;
+        line-height: 1.38;
+        letter-spacing: 0.78px;
+            
+    }
+
+   
 
     &--header {
         color: #000;

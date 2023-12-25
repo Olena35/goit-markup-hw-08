@@ -1,13 +1,21 @@
 .page-header {
-    border-bottom-width: 1px;
-    border-bottom-style: solid;
-    border-bottom-color: #ECECEC;
+    border-bottom: 1px solid #ECECEC;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    
+        @media screen and (min-width: 768px) {
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+
 
     &__nav {
         display: flex;
-        align-items: center;
+        align-items: center;      
+        }
+
     }
-    }
+    
 
 
 .site-nav {

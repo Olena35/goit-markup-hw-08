@@ -1,8 +1,14 @@
 // Feature
 
 .feature {
-    padding-top: 94px;
-    padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+@include mq(desktop) {
+        padding-top: 94px;
+        padding-bottom: 94px;
+    }
+
 
     &__title {
         padding-top: 0;
@@ -16,11 +22,6 @@
         letter-spacing: 1.08px;
     }
 
-
-@include mq(mobile) {
-        padding-top: 60px;
-        padding-bottom: 60px;
-}
 }
 
 .feature-list {
@@ -63,10 +64,17 @@
 @include mq(desktop) {
         margin-right: 0px;
     }
+
     }
 
+    &__title {
+     text-align: center;
 
+     @include mq(tablet) {
+         text-align: start;
+     }
 
+ }
 
     &__rectangle {
     display: flex;
@@ -95,3 +103,5 @@
         margin-bottom: 10px;
     }
 }
+
+

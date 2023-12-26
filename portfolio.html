@@ -14,58 +14,79 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/0.6.0/modern-normalize.min.css"
     />
-    <link rel="stylesheet" href="./css/main.min.css">
+    <link rel="stylesheet" href="./css/main.min.css" />
   </head>
   <body>
-
     <header class="page-header">
       <div class="container page-header__nav">
         <nav class="page-header__nav">
-          <a href="./index.html" class="logo">Web<span class="logo--header">Studio</span></a>
-    
-          <button class="menu-toggle js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
-            <svg width="24" height="24" fill="currentColor" aria-label="Кнопка відкриття мобільного меню">
+          <a href="./index.html" class="logo"
+            >Web<span class="logo--header">Studio</span></a
+          >
+
+          <button
+            class="menu-toggle js-open-menu"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+          >
+            <svg
+              width="24"
+              height="24"
+              fill="currentColor"
+              aria-label="Кнопка відкриття мобільного меню"
+            >
               <use href="./images/icons.svg#icon-menu"></use>
             </svg>
           </button>
-    
+
           <ul class="site-nav list">
             <li class="site-nav__pages">
               <a href="./index.html" class="link site-nav__link">Студія</a>
             </li>
             <li class="site-nav__pages">
-              <a href="" class="portfolio site-nav__link site-nav__link--current">Портфоліо</a>
+              <a
+                href=""
+                class="portfolio site-nav__link site-nav__link--current"
+                >Портфоліо</a
+              >
             </li>
             <li class="site-nav__pages">
               <a href="" class="link site-nav__link">Контакти</a>
             </li>
           </ul>
         </nav>
-    
+
         <ul class="contacts list">
           <li class="contacts__item">
             <a href="mailto:info@devstudio.com" class="contacts__link link">
               <svg class="contacts__envelope" width="16" height="12">
                 <use href="./images/icons.svg#icon-envelope"></use>
               </svg>
-              info@devstudio.com</a>
+              info@devstudio.com</a
+            >
           </li>
           <li class="contacts__item">
             <a href="tel:+380961111111" class="contacts__link link">
               <svg class="contacts__smartphone" width="10" height="16">
                 <use href="./images/icons.svg#icon-smartphone"></use>
               </svg>
-              +38 096 111 11 11</a>
+              +38 096 111 11 11</a
+            >
           </li>
         </ul>
-    
+
         <div class="menu-container js-menu-container" id="mobile-menu">
           <button class="menu-toggle js-close-menu">
-            <svg width="24" height="24" fill="currentColor" aria-label="Кнопка закриття мобільного меню">
+            <svg
+              width="24"
+              height="24"
+              fill="currentColor"
+              aria-label="Кнопка закриття мобільного меню"
+            >
               <use href="./images/icons.svg#icon-menu-close"></use>
             </svg>
           </button>
-    
+
           <div class="menu-mobile">
             <!-- Перелік розділів -->
             <ul class="topics list">
@@ -75,27 +96,35 @@
               </li>
               <li><a href="" class="topics-item">Контакти</a></li>
             </ul>
-    
+
             <!-- Контакти  -->
             <ul class="contacts-list list">
               <li>
-                <a href="tel:+380961111111" class="contact-item phone">+38 096 111 11 11</a>
+                <a href="tel:+380961111111" class="contact-item phone"
+                  >+38 096 111 11 11</a
+                >
               </li>
               <li>
-                <a href="mailto:info@devstudio.com" class="contact-item">info@devstudio.com</a>
+                <a href="mailto:info@devstudio.com" class="contact-item"
+                  >info@devstudio.com</a
+                >
               </li>
             </ul>
-    
+
             <!-- Соц мережі -->
             <ul class="socials-list list">
               <li>
-                <a href="https://www.instagram.com/" class="soc-item">Instagram</a>
+                <a href="https://www.instagram.com/" class="soc-item"
+                  >Instagram</a
+                >
               </li>
               <li>
                 <a href="https://twitter.com/" class="soc-item">Twitter</a>
               </li>
               <li>
-                <a href="https://www.facebook.com/" class="soc-item">Facebook</a>
+                <a href="https://www.facebook.com/" class="soc-item"
+                  >Facebook</a
+                >
               </li>
               <li>
                 <a href="https://www.linkedin.com" class="soc-item">LinkedIn</a>
@@ -106,8 +135,6 @@
       </div>
     </header>
 
-
- 
     <main>
       <section class="section">
         <div class="container">
@@ -123,19 +150,52 @@
               <button type="button">Маркетинг</button>
             </li>
           </ul>
-          
+
           <ul class="project-list list">
-           
+            <!-- Project 1 -->
+
             <li class="little-container">
               <a class="card-link" href="">
                 <div class="card-overlay">
-                  <img
-                    src="./images/projects/img1.jpg"
-                    alt="Фото людей"
-                    width="370"
-                    height="294"
-                    class="image"
-                  />
+                  <picture>
+                    <!--Desktop-->
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/projects/project1/desktop/project1@1xdesk.jpg 1x,
+                        ./images/projects/project1/desktop/project1@2xdesk.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+
+                    <!--Tablet-->
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/projects/project1/tablet/project1@1xtab.jpg 1x,
+                        ./images/projects/project1/tablet/project1@2xtab.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+
+                    <!--Mobile-->
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/projects/project1/mobile/project1@1xmob.jpg 1x,
+                        ./images/projects/project1/mobile/project1@2xmob.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <img
+                      src="./images/projects/img1.jpg"
+                      alt="Фото людей"
+                      width="370"
+                      height="294"
+                      class="image"
+                    />
+                  </picture>
+
                   <p class="card-text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -148,17 +208,51 @@
                 </div>
               </a>
             </li>
-           
+
+            <!-- Project 2 -->
+
             <li class="little-container">
               <a class="card-link" href="">
                 <div class="card-overlay">
-                  <img
-                    src="./images/projects/img2.jpg"
-                    alt="Баскетболісти"
-                    width="370"
-                    height="294"
-                    class="image"
-                  />
+                  <picture>
+                    <!--Desktop-->
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/projects/project2/desktop/project2@1xdesk.jpg 1x,
+                        ./images/projects/project2/desktop/project2@2xdesk.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+
+                    <!--Tablet-->
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/projects/project2/tablet/project2@1xtab.jpg 1x,
+                        ./images/projects/project2/tablet/project2@2xtab.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+
+                    <!--Mobile-->
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/projects/project2/mobile/project2@1xmob.jpg 1x,
+                        ./images/projects/project2/mobile/project2@2xmob.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <img
+                      src="./images/projects/img2.jpg"
+                      alt="Баскетболісти"
+                      width="370"
+                      height="294"
+                      class="image"
+                    />
+                  </picture>
+
                   <p class="card-text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -173,17 +267,51 @@
                 </div>
               </a>
             </li>
-          
+
+            <!-- Project 3 -->
+
             <li class="little-container">
               <a class="card-link" href="">
                 <div class="card-overlay">
-                  <img
-                    src="./images/projects/img3.jpg"
-                    alt="Логотип ресторану у вигляді риби"
-                    width="370"
-                    height="294"
-                    class="image"
-                  />
+                  <picture>
+                    <!--Desktop-->
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/projects/project3/desktop/project3@1xdesk.jpg 1x,
+                        ./images/projects/project3/desktop/project3@2xdesk.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+
+                    <!--Tablet-->
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/projects/project3/tablet/project3@1xtab.jpg 1x,
+                        ./images/projects/project3/tablet/project3@2xtab.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+
+                    <!--Mobile-->
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/projects/project3/mobile/project3@1xmob.jpg 1x,
+                        ./images/projects/project3/mobile/project3@2xmob.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <img
+                      src="./images/projects/img3.jpg"
+                      alt="Логотип ресторану у вигляді риби"
+                      width="370"
+                      height="294"
+                      class="image"
+                    />
+                  </picture>
+
                   <p class="card-text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -196,17 +324,51 @@
                 </div>
               </a>
             </li>
-          
+
+            <!-- Project 4 -->
+
             <li class="little-container">
               <a class="card-link" href="">
                 <div class="card-overlay">
-                  <img
-                    src="./images/projects/img4.jpg"
-                    alt="Навушники"
-                    width="370"
-                    height="294"
-                    class="image"
-                  />
+                  <picture>
+                    <!--Desktop-->
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/projects/project4/desktop/project4@1xdesk.jpg 1x,
+                        ./images/projects/project4/desktop/project4@2xdesk.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+
+                    <!--Tablet-->
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/projects/project4/tablet/project4@1xtab.jpg 1x,
+                        ./images/projects/project4/tablet/project4@2xtab.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+
+                    <!--Mobile-->
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/projects/project4/mobile/project4@1xmob.jpg 1x,
+                        ./images/projects/project4/mobile/project4@2xmob.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <img
+                      src="./images/projects/img4.jpg"
+                      alt="Навушники"
+                      width="370"
+                      height="294"
+                      class="image"
+                    />
+                  </picture>
+
                   <p class="card-text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -219,17 +381,51 @@
                 </div>
               </a>
             </li>
-          
+
+            <!-- Project 5 -->
+
             <li class="little-container">
               <a class="card-link" href="">
                 <div class="card-overlay">
-                  <img
-                    src="./images/projects/img5.jpg"
-                    alt="Дві коробки"
-                    width="370"
-                    height="294"
-                    class="image"
-                  />
+                  <picture>
+                    <!--Desktop-->
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/projects/project5/desktop/project5@1xdesk.jpg 1x,
+                        ./images/projects/project5/desktop/project5@2xdesk.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+
+                    <!--Tablet-->
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/projects/project5/tablet/project5@1xtab.jpg 1x,
+                        ./images/projects/project5/tablet/project5@2xtab.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+
+                    <!--Mobile-->
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/projects/project5/mobile/project5@1xmob.jpg 1x,
+                        ./images/projects/project5/mobile/project5@2xmob.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <img
+                      src="./images/projects/img5.jpg"
+                      alt="Дві коробки"
+                      width="370"
+                      height="294"
+                      class="image"
+                    />
+                  </picture>
+
                   <p class="card-text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -242,17 +438,52 @@
                 </div>
               </a>
             </li>
-           
+
+            <!-- Project 6 -->
+
             <li class="little-container">
               <a class="card-link" href="">
                 <div class="card-overlay">
-                  <img
-                    src="./images/projects/img6.jpg"
-                    alt="Монітор"
-                    width="370"
-                    height="294"
-                    class="image"
-                  />
+                  <picture>
+                    <!--Desktop-->
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/projects/project6/desktop/project6@1xdesk.jpg 1x,
+                        ./images/projects/project6/desktop/project6@2xdesk.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+
+                    <!--Tablet-->
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/projects/project6/tablet/project6@1xtab.jpg 1x,
+                        ./images/projects/project6/tablet/project6@2xtab.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+
+                    <!--Mobile-->
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/projects/project6/mobile/project6@1xmob.jpg 1x,
+                        ./images/projects/project6/mobile/project6@2xmob.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <img
+                      src="./images/projects/img6.jpg"
+                      alt="Монітор"
+                      width="370"
+                      height="294"
+                      class="image"
+                    />
+                  </picture>
+
+                  <img />
                   <p class="card-text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -265,17 +496,51 @@
                 </div>
               </a>
             </li>
-            
+
+            <!-- Project 7 -->
+
             <li class="little-container">
               <a class="card-link" href="">
                 <div class="card-overlay">
-                  <img
-                    src="./images/projects/img7.jpg"
-                    alt="Книжний разворот"
-                    width="370"
-                    height="294"
-                    class="image"
-                  />
+                  <picture>
+                    <!--Desktop-->
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/projects/project7/desktop/project7@1xdesk.jpg 1x,
+                        ./images/projects/project7/desktop/project7@2xdesk.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+
+                    <!--Tablet-->
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/projects/project7/tablet/project7@1xtab.jpg 1x,
+                        ./images/projects/project7/tablet/project7@2xtab.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+
+                    <!--Mobile-->
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/projects/project7/mobile/project7@1xmob.jpg 1x,
+                        ./images/projects/project7/mobile/project7@2xmob.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <img
+                      src="./images/projects/img7.jpg"
+                      alt="Книжний разворот"
+                      width="370"
+                      height="294"
+                      class="image"
+                    />
+                  </picture>
+
                   <p class="card-text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -288,17 +553,51 @@
                 </div>
               </a>
             </li>
-           
+
+            <!-- Project 8 -->
+
             <li class="little-container">
               <a class="card-link" href="">
                 <div class="card-overlay">
-                  <img
-                    src="./images/projects/img8.jpg"
-                    alt="Етикетка"
-                    width="370"
-                    height="294"
-                    class="image"
-                  />
+                  <picture>
+                    <!--Desktop-->
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/projects/project8/desktop/project8@1xdesk.jpg 1x,
+                        ./images/projects/project8/desktop/project8@2xdesk.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+
+                    <!--Tablet-->
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/projects/project8/tablet/project8@1xtab.jpg 1x,
+                        ./images/projects/project8/tablet/project8@2xtab.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+
+                    <!--Mobile-->
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/projects/project8/mobile/project8@1xmob.jpg 1x,
+                        ./images/projects/project8/mobile/project8@2xmob.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <img
+                      src="./images/projects/img8.jpg"
+                      alt="Етикетка"
+                      width="370"
+                      height="294"
+                      class="image"
+                    />
+                  </picture>
+
                   <p class="card-text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -311,17 +610,51 @@
                 </div>
               </a>
             </li>
-          
+
+            <!-- Project 9 -->
+
             <li class="little-container">
               <a class="card-link" href="">
                 <div class="card-overlay">
-                  <img
-                    src="./images/projects/img9.jpg"
-                    alt="Руки на клавіатурі ноутбука"
-                    width="370"
-                    height="294"
-                    class="image"
-                  />
+                  <picture>
+                    <!--Desktop-->
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/projects/project9/desktop/project9@1xdesk.jpg 1x,
+                        ./images/projects/project9/desktop/project9@2xdesk.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+
+                    <!--Tablet-->
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/projects/project9/tablet/project9@1xtab.jpg 1x,
+                        ./images/projects/project9/tablet/project9@2xtab.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+
+                    <!--Mobile-->
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/projects/project9/mobile/project9@1xmob.jpg 1x,
+                        ./images/projects/project9/mobile/project9@2xmob.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <img
+                      src="./images/projects/img9.jpg"
+                      alt="Руки на клавіатурі ноутбука"
+                      width="370"
+                      height="294"
+                      class="image"
+                    />
+                  </picture>
+
                   <p class="card-text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -339,24 +672,29 @@
       </section>
     </main>
 
-   
     <footer class="footer-section">
       <div class="container footer-box">
         <div class="footer-part">
-          <a href="./index.html" class="logo">Web<span class="logo--footer">Studio</span></a>
+          <a href="./index.html" class="logo"
+            >Web<span class="logo--footer">Studio</span></a
+          >
           <address>
             <p class="footer-adress">м. Київ, пр-т Лесі Українки, 26</p>
             <ul class="footer-contacts list">
               <li class="contacts-point">
-                <a class="contacts-item" href="mailto:info@devstudio.com">info@devstudio.com</a>
+                <a class="contacts-item" href="mailto:info@devstudio.com"
+                  >info@devstudio.com</a
+                >
               </li>
               <li class="contacts-point">
-                <a class="contacts-item" href="tel:+380961111111">+38 096 111 11 11</a>
+                <a class="contacts-item" href="tel:+380961111111"
+                  >+38 096 111 11 11</a
+                >
               </li>
             </ul>
           </address>
         </div>
-    
+
         <div class="footer-part">
           <h3 class="social-title">приєднуйтесь</h3>
           <ul class="attend list">
@@ -390,12 +728,23 @@
             </li>
           </ul>
         </div>
-    
+
         <div class="footer-submit">
           <b class="social-title">підпишіться на розсилку</b>
-    
-          <form class="email-form" name="email-form" action="./js/method.js" method="post">
-            <input class="footer-input" type="email" id="user-mail" name="user-mail" placeholder="E-mail" />
+
+          <form
+            class="email-form"
+            name="email-form"
+            action="./js/method.js"
+            method="post"
+          >
+            <input
+              class="footer-input"
+              type="email"
+              id="user-mail"
+              name="user-mail"
+              placeholder="E-mail"
+            />
             <button class="footer-btn" type="submit">
               <span>Підписатися</span>
               <svg class="form-icon" width="24" height="24">

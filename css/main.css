@@ -168,6 +168,11 @@ img {
   border-radius: 50%;
   outline: none;
 }
+@media screen and (min-width: 320px) and (max-width: 374px) {
+  .menu-toggle {
+    margin-left: 120px;
+  }
+}
 @media screen and (min-width: 375px) and (max-width: 424px) {
   .menu-toggle {
     margin-left: 180px;
@@ -197,6 +202,9 @@ img {
 .menu-toggle .menu-toggle:focus {
   background-color: rgba(0, 0, 0, 0.1);
 }
+.menu-toggle:hover, .menu-toggle:focus {
+  color: var(--accent-color);
+}
 
 .menu-container {
   position: fixed;
@@ -213,6 +221,11 @@ img {
   transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media screen and (min-width: 768px) {
+  .menu-container {
+    display: none;
+  }
 }
 
 .menu-container.is-open {
@@ -1102,58 +1115,6 @@ img {
   fill: currentColor;
 }
 
-.button-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin-bottom: 40px;
-}
-@media screen and (min-width: 768px) and (max-width: 1199.98px) {
-  .button-list {
-    margin-bottom: 30px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .button-list {
-    margin-bottom: 50px;
-  }
-}
-
-.button-list button {
-  color: var(--title-text-color);
-  background-color: var(--primary-bg-color);
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 1.63;
-  letter-spacing: 0.48px;
-  cursor: pointer;
-  border-radius: 4px;
-  border: 1px solid transparent;
-  padding: 6px 22px;
-  text-align: center;
-  -webkit-transition: background-color 250ms var(--timing-function), color 250ms var(--timing-function), -webkit-box-shadow 250ms var(--timing-function);
-  transition: background-color 250ms var(--timing-function), color 250ms var(--timing-function), -webkit-box-shadow 250ms var(--timing-function);
-  transition: background-color 250ms var(--timing-function), color 250ms var(--timing-function), box-shadow 250ms var(--timing-function);
-  transition: background-color 250ms var(--timing-function), color 250ms var(--timing-function), box-shadow 250ms var(--timing-function), -webkit-box-shadow 250ms var(--timing-function);
-}
-
-.button-list button:hover,
-.button-list button:focus {
-  color: var(--primary-bg-color);
-  background-color: var(--accent-color);
-  -webkit-box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12), 0px 1px 2px 0px rgba(0, 0, 0, 0.08), 0px 3px 1px 0px rgba(0, 0, 0, 0.1);
-          box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12), 0px 1px 2px 0px rgba(0, 0, 0, 0.08), 0px 3px 1px 0px rgba(0, 0, 0, 0.1);
-}
-
-.button-list .button-point + .button-point {
-  margin-left: 8px;
-}
-
 .page-header {
   border-bottom: 1px solid #ECECEC;
   padding-top: 16px;
@@ -1283,6 +1244,60 @@ img {
   }
 }
 
+.button-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 40px;
+}
+@media screen and (min-width: 768px) and (max-width: 1199.98px) {
+  .button-list {
+    gap: 8px;
+    margin-bottom: 30px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .button-list {
+    gap: 8px;
+    margin-bottom: 50px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+.button-list button {
+  color: var(--title-text-color);
+  background-color: var(--primary-bg-color);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.63;
+  letter-spacing: 0.48px;
+  cursor: pointer;
+  border-radius: 4px;
+  border: 1px solid transparent;
+  padding: 6px 22px;
+  text-align: center;
+  -webkit-transition: background-color 250ms var(--timing-function), color 250ms var(--timing-function), -webkit-box-shadow 250ms var(--timing-function);
+  transition: background-color 250ms var(--timing-function), color 250ms var(--timing-function), -webkit-box-shadow 250ms var(--timing-function);
+  transition: background-color 250ms var(--timing-function), color 250ms var(--timing-function), box-shadow 250ms var(--timing-function);
+  transition: background-color 250ms var(--timing-function), color 250ms var(--timing-function), box-shadow 250ms var(--timing-function), -webkit-box-shadow 250ms var(--timing-function);
+}
+
+.button-list button:hover,
+.button-list button:focus {
+  color: var(--primary-bg-color);
+  background-color: var(--accent-color);
+  -webkit-box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12), 0px 1px 2px 0px rgba(0, 0, 0, 0.08), 0px 3px 1px 0px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12), 0px 1px 2px 0px rgba(0, 0, 0, 0.08), 0px 3px 1px 0px rgba(0, 0, 0, 0.1);
+}
+
 /* Projects list */
 .project-list {
   display: -webkit-box;
@@ -1293,14 +1308,40 @@ img {
   gap: 30px;
   padding: 0;
   list-style: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .project-list {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .project-list {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    list-style: none;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    width: 1170px;
   }
 }
 
@@ -1387,16 +1428,20 @@ img {
 }
 
 .little-container {
-  width: 450px;
+  max-width: 450px;
+  margin-bottom: 30px;
 }
-@media screen and (min-width: 768px) and (max-width: 1199.98px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .little-container {
     width: 354px;
+    margin-bottom: 0;
   }
 }
 @media screen and (min-width: 1200px) {
   .little-container {
+    margin-bottom: 0;
     width: 370px;
+    margin-bottom: 0;
   }
 }
 
@@ -1594,14 +1639,12 @@ address {
 }
 
 /* Форма для розсилки */
-.footer-submit {
-  width: 480px;
-}
 @media screen and (min-width: 768px) {
   .footer-submit {
     -webkit-box-align: baseline;
         -ms-flex-align: baseline;
             align-items: baseline;
+    width: 450px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -1700,6 +1743,60 @@ address {
   fill: currentColor;
 }
 
+.button-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 40px;
+}
+@media screen and (min-width: 768px) and (max-width: 1199.98px) {
+  .button-list {
+    gap: 8px;
+    margin-bottom: 30px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .button-list {
+    gap: 8px;
+    margin-bottom: 50px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+.button-list button {
+  color: var(--title-text-color);
+  background-color: var(--primary-bg-color);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.63;
+  letter-spacing: 0.48px;
+  cursor: pointer;
+  border-radius: 4px;
+  border: 1px solid transparent;
+  padding: 6px 22px;
+  text-align: center;
+  -webkit-transition: background-color 250ms var(--timing-function), color 250ms var(--timing-function), -webkit-box-shadow 250ms var(--timing-function);
+  transition: background-color 250ms var(--timing-function), color 250ms var(--timing-function), -webkit-box-shadow 250ms var(--timing-function);
+  transition: background-color 250ms var(--timing-function), color 250ms var(--timing-function), box-shadow 250ms var(--timing-function);
+  transition: background-color 250ms var(--timing-function), color 250ms var(--timing-function), box-shadow 250ms var(--timing-function), -webkit-box-shadow 250ms var(--timing-function);
+}
+
+.button-list button:hover,
+.button-list button:focus {
+  color: var(--primary-bg-color);
+  background-color: var(--accent-color);
+  -webkit-box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12), 0px 1px 2px 0px rgba(0, 0, 0, 0.08), 0px 3px 1px 0px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12), 0px 1px 2px 0px rgba(0, 0, 0, 0.08), 0px 3px 1px 0px rgba(0, 0, 0, 0.1);
+}
+
 /* Projects list */
 .project-list {
   display: -webkit-box;
@@ -1710,14 +1807,40 @@ address {
   gap: 30px;
   padding: 0;
   list-style: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .project-list {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .project-list {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    list-style: none;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    width: 1170px;
   }
 }
 
@@ -1804,16 +1927,20 @@ address {
 }
 
 .little-container {
-  width: 450px;
+  max-width: 450px;
+  margin-bottom: 30px;
 }
-@media screen and (min-width: 768px) and (max-width: 1199.98px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .little-container {
     width: 354px;
+    margin-bottom: 0;
   }
 }
 @media screen and (min-width: 1200px) {
   .little-container {
+    margin-bottom: 0;
     width: 370px;
+    margin-bottom: 0;
   }
 }
 

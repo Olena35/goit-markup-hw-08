@@ -92,7 +92,9 @@
             <!-- Перелік розділів -->
             <ul class="topics list">
               <li><a href="" class="topics-item">Студія</a></li>
-              <li><a href="" class="topics-item">Портфоліо</a></li>
+              <li>
+                <a href="./portfolio.html" class="topics-item">Портфоліо</a>
+              </li>
               <li><a href="" class="topics-item">Контакти</a></li>
             </ul>
 
@@ -294,35 +296,77 @@
         <div class="container">
           <h2 class="work__title">Чим ми займаємося</h2>
           <ul class="worklist list">
+            <!-- box 1 Розробка десктопних застосунків -->
+
             <li class="worklist__item">
-              <img
-                src="./images/work/box1.jpg"
-                alt="Розробка десктопних застосунків"
-                width="370"
-                height="294"
-                class="worklist__image"
-              />
+              <picture>
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/work/box1/box@1xdesk.jpg 1x,
+                    ./images/work/box1/box@2xdesk.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <img
+                  class="worklist__image"
+                  src="./images/work/box1.jpg"
+                  alt="Розробка десктопних застосунків"
+                  width="370"
+                  height="294"
+                />
+              </picture>
+
               <p class="worklist__text">Десктопні додатки</p>
             </li>
+
+            <!-- box 2 Розробка мобільних застосунків -->
+
             <li class="worklist__item">
-              <img
-                src="./images/work/box2.jpg"
-                alt="Розробка мобільних застосунків"
-                width="370"
-                height="294"
-                class="worklist__image"
-              />
+              <picture>
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/work/box2/box2@1xdesk.jpg 1x,
+                    ./images/work/box2/box2@2xdesk.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <img
+                  class="worklist__image"
+                  src="./images/work/box2.jpg"
+                  alt="Розробка мобільних застосунків"
+                  width="370"
+                  height="294"
+                />
+              </picture>
+
               <p class="worklist__text">Мобільні додатки</p>
             </li>
+
+            <!-- box 3 Дизайнерські рішення -->
+
             <li class="worklist__item">
-              <img
-                src="./images/work/box3.jpg"
-                alt="Дизайнерські рішення"
-                width="370"
-                height="294"
-                class="worklist__image"
-              />
+              <picture>
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/work/box3/box3@1xdesk.jpg 1x,
+                    ./images/work/box3/box3@2xdesk.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <img
+                  class="worklist__image"
+                  src="./images/work/box3.jpg"
+                  alt="Дизайнерські рішення"
+                  width="370"
+                  height="294"
+                />
+              </picture>
+
               <p class="worklist__text">Дизайнерські рішення</p>
+              
             </li>
           </ul>
         </div>
@@ -338,7 +382,7 @@
                   media="(min-width: 1200px)"
                   srcset="
                     ./images/team/igor/desktop/igor@1xdesk.jpg 1x,
-                    ./images/team/igor/desktop/igor@1xdesk.jpg 2x
+                    ./images/team/igor/desktop/igor@2xdesk.jpg 2x
                   "
                   type="image/jpg"
                 />
@@ -426,7 +470,7 @@
                   media="(min-width: 1200px)"
                   srcset="
                     ./images/team/olga/desktop/olga@1xdesk.jpg 1x,
-                    ./images/team/olga/desktop/olga@1xdesk.jpg 2x
+                    ./images/team/olga/desktop/olga@2xdesk.jpg 2x
                   "
                   type="image/jpg"
                 />
@@ -516,7 +560,7 @@
                   media="(min-width: 1200px)"
                   srcset="
                     ./images/team/mykola/desktop/mykola@1xdesk.jpg 1x,
-                    ./images/team/mykola/desktop/mykola@1xdesk.jpg 2x
+                    ./images/team/mykola/desktop/mykola@2xdesk.jpg 2x
                   "
                   type="image/jpg"
                 />
@@ -525,7 +569,7 @@
                   media="(min-width: 768px)"
                   srcset="
                     ./images/team/mykola/tablet/mykola@1xtab.jpg 1x,
-                    ./images/team/mykola/tablet/mykola@1xtab.jpg 2x
+                    ./images/team/mykola/tablet/mykola@2xtab.jpg 2x
                   "
                   type="image/jpg"
                 />
@@ -534,7 +578,7 @@
                   media="(max-width: 767px)"
                   srcset="
                     ./images/team/mykola/mobile/mykola@1xmob.jpg 1x,
-                    ./images/team/mykola/mobile/mykola@1xmob.jpg 2x
+                    ./images/team/mykola/mobile/mykola@2xmob.jpg 2x
                   "
                   type="image/jpg"
                 />

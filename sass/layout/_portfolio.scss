@@ -1,3 +1,52 @@
+
+// button-list portfolio
+
+.button-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 40px;
+
+    @include mq(tablet-only) {
+        gap: 8px;
+        margin-bottom: 30px;
+        justify-content: center;
+    }
+
+    @include mq(desktop) {
+        gap: 8px;
+        margin-bottom: 50px;
+        justify-content: center;
+    }
+}
+
+.button-list button {
+    color: var(--title-text-color);
+    background-color: var(--primary-bg-color);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.63;
+    letter-spacing: 0.48px;
+    cursor: pointer;
+    border-radius: 4px;
+    border: 1px solid transparent;
+    padding: 6px 22px;
+    text-align: center;
+    transition: background-color 250ms var(--timing-function),
+        color 250ms var(--timing-function),
+        box-shadow 250ms var(--timing-function);
+}
+
+.button-list button:hover,
+.button-list button:focus {
+    color: var(--primary-bg-color);
+    background-color: var(--accent-color);
+    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12), 0px 1px 2px 0px rgba(0, 0, 0, 0.08), 0px 3px 1px 0px rgba(0, 0, 0, 0.10);
+}
+
+
+
+
 /* Projects list */
 
 .project-list {
@@ -6,11 +55,22 @@
     gap: 30px;
     padding: 0;
     list-style: none;
-
-    @include mq(tablet) {
-    display: flex;
+    flex-direction: column;
+    justify-content: center;
+         
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+    flex-direction: row;
     flex-wrap: wrap;
-        }
+    justify-content: flex-start;
+    }
+            
+    @media screen and (min-width: 1200px) {
+    flex-direction: row;
+    list-style: none;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 1170px;
+    }
 }
 
 .card-link {
@@ -89,6 +149,8 @@
     line-height: 2;
     letter-spacing: 1.08px;
     text-decoration: none;
+
+    
 }
 
 
@@ -97,16 +159,19 @@
 }
 
 .little-container {
-    width: 450px;
-
-@include mq(tablet-only) {
+    max-width: 450px;
+    margin-bottom: 30px;
+        
+@media screen and (min-width: 768px) and (max-width: 1199px) {
     width: 354px;
-    }
-   
-@include mq(desktop) {
-    width: 370px;
-    }
-
+    margin-bottom: 0;
+}
+        
+@media screen and (min-width: 1200px) {
+                margin-bottom: 0;
+                width: 370px;
+                margin-bottom: 0;
+            }
 }
 
 

@@ -156,10 +156,10 @@ display: flex;
 
 .footer-submit {
 
-    width: 480px;
 
     @include mq(tablet) {
             align-items: baseline;
+            width: 450px;
         }
 
     @include mq(desktop) {
@@ -181,6 +181,7 @@ display: flex;
     gap: 12px;
     width: 100%;
     flex-shrink: 0;
+
 
 @include mq(desktop) {
         display: flex;

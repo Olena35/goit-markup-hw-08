@@ -105,6 +105,10 @@
     }
 }
 
+.accent {
+    color: var(--accent-color);
+}
+
 .topics li {
     margin-top: 32px;
 }
@@ -116,9 +120,11 @@
 
 .socials-list {
     display: flex;
-     
 }
 
+.contacts-list li {
+    margin-bottom: 32px;
+}
 
 
 .contact-item {
@@ -133,8 +139,9 @@
         &:focus {
             color: var(--accent-color);
             }
-
 }
+
+
 
 .phone {
         font-size: 34px;

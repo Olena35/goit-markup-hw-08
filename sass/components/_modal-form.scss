@@ -42,6 +42,10 @@
   left: 50%;
   transform: translate(-50%, -50%);
 
+  padding: 20px;
+  max-width: 320px;
+  width: 100%;
+
   @include mq(mobile) {
     padding: 40px;
     max-width: 450px;
@@ -102,11 +106,11 @@
 
   &__title {
     display: flex;
-    height: 23px;
-    color: var(--title-text-color);
     align-items: center;
     justify-content: center;
-    font-size: 14px;
+    height: 23px;
+    color: var(--title-text-color);
+    font-size: 16px;
     font-weight: 700;
     letter-spacing: 0.6px;
 
@@ -149,14 +153,12 @@
     outline-offset: -1px;
   }
 
- @include mq(mobile) {
+  @include mq(mobile) {
     padding-top: 11px;
     padding-right: 12px;
     padding-bottom: 11px;
     padding-left: 35px;
- }
-
-
+  }
 }
 
 .form-modal-icon {
@@ -171,7 +173,6 @@
 .wrapper-input:focus ~ .form-modal-icon {
   fill: var(--accent-color);
 }
-
 
 /* Коментар */
 
@@ -224,10 +225,16 @@
 
 .form-policy {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 24px;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
+
+  @include mq(mobile) {
+    margin-bottom: 30px;
+  }
+
+  @include mq(desktop) {
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 .custom-checkbox {
@@ -241,6 +248,10 @@
   outline-offset: -2px;
   border-radius: 1px;
   transition: outline 250ms var(--timing-function);
+
+  @include mq(desktop) {
+    margin-top: 0;
+  }
 }
 
 .form-policy:hover > .custom-checkbox {
@@ -264,19 +275,49 @@
   opacity: 1;
 }
 
-.contract {
-  color: var(--accent-color);
+.form-policy-desc {
+  font-size: 9px;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.36px;
+
+  @media screen and (min-width: 480px) {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.17;
+    letter-spacing: 0.36px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.7;
+    letter-spacing: 0.42px;
+  }
 }
 
-.form-policy-desk {
-  font-size: 12px;
+.contract {
+  color: var(--accent-color);
+  font-size: 9px;
+  font-style: normal;
   font-weight: 400;
-  line-height: 1.17;
-  letter-spacing: 0.36px;
+  line-height: normal;
   text-decoration-line: underline;
 
-  @include mq(desktop) {
+  transition-timing-function: color 250 ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  @media screen and (min-width: 480px) {
+    font-size: 12px;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.17;
+    letter-spacing: 0.36px;
+  }
+
+  @media screen and (min-width: 1200px) {
     font-size: 14px;
+    font-weight: 400;
     line-height: 1.7;
-    }
+    letter-spacing: 0.42px;
+  }
 }

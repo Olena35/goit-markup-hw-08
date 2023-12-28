@@ -1,130 +1,119 @@
 .page-header {
-    border-bottom: 1px solid #ECECEC;
-    padding-top: 16px;
-    padding-bottom: 16px;
-    
-        @media screen and (min-width: 768px) {
-            padding-top: 0;
-            padding-bottom: 0;
-        }
+  border-bottom: 1px solid #ececec;
+  padding-top: 16px;
+  padding-bottom: 16px;
 
+  @media screen and (min-width: 768px) {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
 
-    &__nav {
-        display: flex;
-        align-items: center;      
-        }
-
-    }
-    
-
-
-.site-nav {
+  &__nav {
     display: flex;
-    margin-left: 43px;
-
-    &__pages {
-        display: flex;
-        transition: color 250ms var(--timing-function);
-        margin-left: 50px;
-    }
-
-    &__pages:hover,
-    &__pages:focus {
-        color: var(--accent-color);
-    }
-
-
-    &__link {
-        position: relative;
-        transition: color 250ms var(--timing-function);
-    }
-
-    &__link:hover,
-    &__link:focus {
-        color: var(--accent-color);
-    }
-
-
-    &__link--current {
-        color: var(--accent-color);
-    }
-
-
-    &__link--current::after {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        content: "";
-        display: block;
-        width: 100%;
-        height: 4px;
-        background-color: var(--accent-color);
-        border-radius: 2px;
-    }
-
-    @media (max-width: 767px) {
-        display: none;
-    }
+    align-items: center;
+  }
 }
 
+.site-nav {
+  display: flex;
+  margin-left: 43px;
+
+  &__pages {
+    display: flex;
+    transition: color 250ms var(--timing-function);
+    margin-left: 50px;
+  }
+
+  &__pages:hover,
+  &__pages:focus {
+    color: var(--accent-color);
+  }
+
+  &__link {
+    position: relative;
+    transition: color 250ms var(--timing-function);
+  }
+
+  &__link:hover,
+  &__link:focus {
+    color: var(--accent-color);
+  }
+
+  &__link--current {
+    color: var(--accent-color);
+  }
+
+  &__link--current::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    content: "";
+    display: block;
+    width: 100%;
+    height: 4px;
+    background-color: var(--accent-color);
+    border-radius: 2px;
+  }
+
+  @media (max-width: 767px) {
+    display: none;
+  }
+}
 
 /* Contacts */
 
 .contacts {
+  display: flex;
+  margin-left: auto;
+  gap: 30px;
+
+  &__link {
     display: flex;
-    margin-left: auto;
-    gap: 30px;
-
-    &__link {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        color: var(--primary-text-color);
-        font-family: Roboto;
-        font-size: 14px;
-        font-weight: 500;
-        line-height: 1.14;
-        letter-spacing: 0.28px;
-        text-decoration: none;
-        transition: color 250ms var(--timing-function);
-
-            @include mq(tablet-only) {
-                margin: 0;
-                padding: 0;
-            }
-    }
-
-
-    &__link:hover,
-    &__link:focus {
-        color: var(--accent-color);
-        fill: var(--accent-color);
-    }
-
-    &__envelope {
-        margin-right: 10px;
-        fill: currentColor;
-    }
-
-    &__smartphone {
-        margin-right: 10px;
-        fill: currentColor;
-    }
-
-    @media (max-width: 767px) {
-        display: none;
-    }
+    justify-content: center;
+    align-items: center;
+    color: var(--primary-text-color);
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.14;
+    letter-spacing: 0.28px;
+    text-decoration: none;
+    transition: color 250ms var(--timing-function);
 
     @include mq(tablet-only) {
-        display: block;
+      margin: 0;
+      padding: 0;
     }
+  }
 
+  &__link:hover,
+  &__link:focus {
+    color: var(--accent-color);
+    fill: var(--accent-color);
+  }
+
+  &__envelope {
+    margin-right: 10px;
+    fill: currentColor;
+  }
+
+  &__smartphone {
+    margin-right: 10px;
+    fill: currentColor;
+  }
+
+  @media (max-width: 767px) {
+    display: none;
+  }
+
+  @include mq(tablet-only) {
+    display: block;
+  }
 }
 
-
-.contacts__item+.contacts__item {
-    @include mq(tablet-only) {
-        margin-top: 10px;
-        margin-right: 17px;
-    }
+.contacts__item + .contacts__item {
+  @include mq(tablet-only) {
+    margin-top: 10px;
+    margin-right: 17px;
+  }
 }
